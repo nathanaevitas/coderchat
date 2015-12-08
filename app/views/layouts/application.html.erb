@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coderchat</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">CoderChat</h3>
+          <nav class="nav nav-masthead">
+            <%= link_to "Sign Up", sign_up_path, class: "nav-link active" %>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      	<%= yield %>
+      <div class="mastfoot">
+        <div class="inner">
+          <p><a href="/">CoderChat</a></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

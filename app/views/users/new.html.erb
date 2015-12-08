@@ -1,0 +1,10 @@
+<h4>New User SignUp</h4>
+<div class="form-group">	
+	<%= simple_form_for @User do |f| %>
+		<%= f.input :name, label: false, class: "form-control" %>
+		<%= f.input :email, label: false , class: "form-control" %>
+		<%= f.input :password, label: false , class: "form-control"%>
+		<%= f.input :password_confirmation, label:false, class: "form-control" %>
+		<%= f.button :submit, class: 'btn btn-primary' %>
+	<% end %>
+</div>
