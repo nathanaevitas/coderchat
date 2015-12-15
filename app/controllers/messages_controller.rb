@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-	before_action :require_authenticate, only: [:index, :show, :new, :create]
+	before_action :require_authenticate, only: [:index, :index2, :show, :new, :create]
   def index
   	@messages = Message.where(recipient: current_user)
   end
