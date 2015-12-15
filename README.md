@@ -1,4 +1,4 @@
-# Week1 Assigment - *Coder Chat App*
+# Week2 Assigment - *Coder Chat App*
 
 **CoderChat** is a Ruby on Rails application.
 
