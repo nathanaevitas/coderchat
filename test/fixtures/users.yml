@@ -1,11 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
-  password_digest: MyString
+  name: Nathan Tran
+  email: nathan@tran.com
+  password_digest: 1234
 
 two:
-  name: MyString
-  email: MyString
-  password_digest: MyString
+  name: David Hung
+  email: david@hung.com
+  password_digest: 1234
+
+three:
+  name: Paul Nguyen
+  email: paul@nguyen.com
+  password_digest: 1234
+
+four:
+  name: Rachel Fang
+  email: rachel@fang.com
+  password_digest: 1234
+
+five:
+  name: Helen Chia
+  email: helen@chia.com
+  password_digest: 1234

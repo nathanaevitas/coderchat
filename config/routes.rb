@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'messages/create'
 
+  get 'sent_messages' => 'messages#index2'
+
   resources :messages
 
   resources :friendships

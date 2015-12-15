@@ -4,6 +4,10 @@ class MessagesController < ApplicationController
   	@messages = Message.where(recipient: current_user)
   end
 
+  def index2
+    @messages = Message.where(sender: current_user)
+  end
+
   def show
   end
 
