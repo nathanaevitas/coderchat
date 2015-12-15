@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_authenticate
   def new
   	@User = User.new
   end
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save
-  		render text: "New users created"
+  		redirect_to log_in_path
   	else
   		render 'new'
   	end
