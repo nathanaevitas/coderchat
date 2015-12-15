@@ -1,10 +1,12 @@
-<h4>New User SignUp</h4>
-<div class="form-group">	
+<h1 class="header center teal-text text-lighten-2">Sign Up</h1>
+<div class="form-group lime-text text-accent-4">	
 	<%= simple_form_for @User do |f| %>
-		<%= f.input :name, label: false, class: "form-control" %>
-		<%= f.input :email, label: false , class: "form-control" %>
-		<%= f.input :password, label: false , class: "form-control"%>
-		<%= f.input :password_confirmation, label:false, class: "form-control" %>
-		<%= f.button :submit, class: 'btn btn-primary' %>
+		<%= f.input :name, label: "name", class: 'input-field col s6' %>
+		<%= f.input :email, label: "email", class: 'input-field col s6'   %>
+		<%= f.input :password, label: "password", class: 'input-field col s6 '%>
+		<%= f.input :password_confirmation, label: "password again!", class: 'input-field col s6' %>
+		<div class="row center">
+		<%= f.button :submit, "Sign Up", class: 'btn btn-primary' %>
+		<div class="row center">
 	<% end %>
 </div>

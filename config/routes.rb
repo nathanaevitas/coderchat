@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
+  get 'messages_list' => 'messages#index'
+
+  get 'messages/show'
+
+  get 'messages/new'
+
+  get 'messages/create'
+
+  resources :messages
+
+  resources :friendships
+  get 'log_in' => 'sessions#new'
+  post 'log_in' => 'sessions#create'
+  get 'log_out' => 'sessions#destroy'
+  get 'profile' => 'users#show'
   get 'users/new'
+
   resources :users
   get 'sign_up' => 'users#new'  
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
   <title>Coderchat</title>
@@ -7,31 +7,75 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">CoderChat</h3>
-          <nav class="nav nav-masthead">
-            <%= link_to "Sign Up", sign_up_path, class: "nav-link active" %>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
-        </div>
-      </div>
-      	<%= yield %>
-      <div class="mastfoot">
-        <div class="inner">
-          <p><a href="/">CoderChat</a></p>
-        </div>
-      </div>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">CoderChat</a>
+      <ul class="right hide-on-med-and-down">
+        <% if signed_in? %>
+          <li><%= link_to "All Users", users_path%></li>
+          <li><%= link_to "Log Out", log_out_path %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", sign_up_path %></li>
+          <li><%= link_to "Log In", log_in_path %></li>
+        <% end %>
+      </ul>
 
+      <ul id="nav-mobile" class="side-nav">
+       <% if signed_in? %>
+          <li><%= link_to "All Users", users_path, method: :index %></li>
+          <li><%= link_to "Log Out", log_out_path %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", sign_up_path %></li>
+          <li><%= link_to "Log In", log_in_path %></li>
+        <% end %>
+      </ul>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-
+  </nav>
+  <div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <%= yield %>
+    </div>
   </div>
-
+  <div class="parallax"><%= image_tag 'background.jpg', alt: 'coder chat background' %></div>
 </div>
+  
 
+  <footer class="page-footer teal">
+   <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">CoderChat Bio</h5>
+          <p class="grey-text text-lighten-4">CoderChat for coders to chat!</p>
+        </div>     
+      </div>
+    </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Made By <%= link_to "CoderChat", '/' %>
+      </div>
+    </div>
+  </footer>
 </body>
+  <script type="text/javascript">
+    (function($){
+      $(function(){
+
+        $('.button-collapse').sideNav();
+        $('.parallax').parallax();
+
+      }); // end of document ready
+    })(jQuery); // end of jQuery name space
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+    // Initialize collapse button
+      $(".button-collapse").sideNav();
+      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+      //$('.collapsible').collapsible();        
+  </script>
 </html>

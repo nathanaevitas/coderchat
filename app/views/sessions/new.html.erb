@@ -1,0 +1,10 @@
+<h1 class="header center teal-text text-lighten-2">Log In</h1>
+<div class ="row teal-text text-darken-2">
+	<%= simple_form_for :session, url: log_in_path do |f| %>
+		<%= f.input :email, label: "email", class: 'input-field col s6' %>
+		<%= f.input :password, label: "password", class: 'input-field col s6' %>
+		<div class="row center">
+		<%= f.button :submit, "Log In", class: 'btn btn-primary' %>
+		</div>
+	<% end %> 
+</div>

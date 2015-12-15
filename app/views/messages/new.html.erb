@@ -1,0 +1,15 @@
+<h4 class="header center teal-text text-lighten-2">Send New Message</h4>
+<div class="form-group lime-text text-accent-4">	
+	<%= simple_form_for @message do |f| %>		
+		
+		<%= f.input :recipient do %>			
+	  		<%= f.select :recipient, current_user.friends.collect {|f| [f.name, f.id] }, label: "recipient", include_blank: true,class: 'input-field col s6' %>
+		<% end %>	
+	
+		<%= f.input :body, label: "Message", class: 'input-field col s6' %>
+		
+		<div class="row center">
+		<%= f.button :submit, "Send", class: 'btn btn-primary' %>
+		<div class="row center">
+	<% end %>
+</div>

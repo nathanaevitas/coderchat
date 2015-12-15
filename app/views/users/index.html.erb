@@ -1,0 +1,11 @@
+<h1 class="header center teal-text text-lighten-2">User List</h1>
+<div class="collection">
+	<% @Users.each do |user| %>
+		<%= link_to friendships_path(friend_id: user), :method => :post, 
+		class: "collection-item" do %>
+		<%= user.name %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class = "left-align">Add Friend</span>
+		<% end %>
+
+	<% end %>
+	
+</div>

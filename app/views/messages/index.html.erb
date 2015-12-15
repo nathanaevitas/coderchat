@@ -1,0 +1,15 @@
+<h4 class="header center teal-text text-lighten-2">Message List</h4>
+<div class = 'row'>
+<% if @messages %>
+	<%= @messages.each do |message| %>
+    <div class="col s6">
+      <h6>Sender: <b><%= message.sender.name %></b></h6>
+      <h6>Sent at: <b><%= message.created_at.strftime("%A, %B %d, %H:%M") %></b></h6>
+      <hr>
+      <p>
+        <%= message.body %>    
+      </p>
+    </div>
+   	<% end %>
+<% end %>
+</div>
