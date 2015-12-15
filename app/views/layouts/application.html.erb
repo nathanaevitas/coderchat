@@ -13,29 +13,29 @@
       <a id="logo-container" href="/" class="brand-logo">CoderChat</a>
       <ul class="right hide-on-med-and-down">
         <% if signed_in? %>
-          <li><%= link_to "Incomming Messages", messages_list_path %></li>
-          <li><%= link_to "Send Message", messages_new_path %></li>
-          <li><%= link_to "Sent Messages", sent_messages_path %></li>
-          <li><%= link_to "My Friends", profile_path %></li>
-          <li><%= link_to "Add Friends", users_path%></li>
-          <li><%= link_to "Log Out", log_out_path %></li>
+          <li><%= active_link "Incomming Messages", messages_list_path %></li>
+          <li><%= active_link "Send Message", messages_new_path %></li>
+          <li><%= active_link "Sent Messages", sent_messages_path %></li>
+          <li><%= active_link "My Friends", profile_path %></li>
+          <li><%= active_link "Add Friends", users_path%></li>
+          <li><%= active_link "Log Out", log_out_path %></li>
         <% else %>
-          <li><%= link_to "Sign Up", sign_up_path %></li>
-          <li><%= link_to "Log In", log_in_path %></li>
+          <li><%= active_link "Sign Up", sign_up_path %></li>
+          <li><%= active_link "Log In", log_in_path %></li>
         <% end %>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
        <% if signed_in? %>
-          <li><%= link_to "Incomming Messages", messages_list_path %></li>
-          <li><%= link_to "Send Message", messages_new_path %></li>
-          <li><%= link_to "Sent Messages", sent_messages_path %></li>
-          <li><%= link_to "My Friends", profile_path %></li>
-          <li><%= link_to "Add Friends", users_path%></li>
-          <li><%= link_to "Log Out", log_out_path %></li>
+          <li><%= active_link "Incomming Messages", messages_list_path %></li>
+          <li><%= active_link "Send Message", messages_new_path %></li>
+          <li><%= active_link "Sent Messages", sent_messages_path %></li>
+          <li><%= active_link "My Friends", profile_path %></li>
+          <li><%= active_link "Add Friends", users_path%></li>
+          <li><%= active_link "Log Out", log_out_path %></li>
         <% else %>
-          <li><%= link_to "Sign Up", sign_up_path %></li>
-          <li><%= link_to "Log In", log_in_path %></li>
+          <li><%= active_link "Sign Up", sign_up_path %></li>
+          <li><%= active_link "Log In", log_in_path %></li>
         <% end %>
       </ul>
       </ul>
